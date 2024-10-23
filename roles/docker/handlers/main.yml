@@ -1,0 +1,6 @@
+---
+- name: restart nginx
+  ansible.builtin.command:
+    cmd: docker-compose restart nginx
+    chdir: /home/{{ ansible_user }}
+  tags: nginx

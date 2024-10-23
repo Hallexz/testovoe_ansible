@@ -1,0 +1,6 @@
+---
+- name: Копировать Dockerfile на сервер
+  ansible.builtin.copy:
+    src: Dockerfile
+    dest: /home/{{ ansible_user }}/Dockerfile
+  tags: deploy
